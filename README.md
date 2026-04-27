@@ -15,23 +15,30 @@ pip install -r requirements.txt
 
 ## 3. Configure environment variables
 
+Create '.env' file 
+
+and add this info:
 ```bash
-cp .env.example .env
+Application Settings
+APP_NAME="ACL Surgery Patient Assistant"
+APP_VERSION="0.1.0"
+DEBUG=false
+
+Server Settings
+HOST=0.0.0.0
+PORT=8000
+
+Database Settings
+DATABASE_URL=sqlite:///./acl_agent.db
+
+Logging Settings
+LOG_LEVEL=INFO
+
+LLM Settings
+OPENAI_API_KEY=your_openai_key_here
 ```
 
-Edit `.env` and set:
 
-```env
-OPENAI_API_KEY=sk-...
-```
-
-Optional (only needed for real Twilio SMS):
-
-```env
-TWILIO_ACCOUNT_SID=AC...
-TWILIO_AUTH_TOKEN=...
-TWILIO_FROM_NUMBER=+1...
-```
 
 ## 4. Initialize database schema
 
